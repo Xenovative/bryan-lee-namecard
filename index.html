@@ -31,7 +31,7 @@
 
         body {
             font-family: 'Inter', 'Arial', sans-serif;
-            font-size: 15px;
+            font-size: 16px;
             background-color: var(--bg-dark);
             color: var(--gold-muted);
             line-height: 1.65;
@@ -103,32 +103,33 @@
 
         /* Save Contact Button */
         .save-contact-section {
-            text-align: center;
-            padding: 25px 30px 35px;
+            padding: 0 12px 18px;
         }
 
-        .save-contact-btn {
-            display: inline-block;
-            background-color: var(--gold);
-            color: #000;
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 14px 48px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        .btn-save {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(180deg, #ffd86a 0%, #ffcc4f 55%, #e8b030 100%);
+            color: #1a1200;
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
             text-decoration: none;
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
+            text-align: center;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 18px rgba(255, 204, 79, 0.35);
         }
 
-        .save-contact-btn:hover {
-            background-color: #FFD97A;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(255, 204, 79, 0.3);
+        .btn-save:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 22px rgba(255, 204, 79, 0.48);
         }
 
-        .save-contact-btn:active {
+        .btn-save:active {
             transform: translateY(0);
         }
 
@@ -145,15 +146,16 @@
             font-size: 1.05rem;
             font-weight: 700;
             color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
             margin-bottom: 12px;
             padding-bottom: 8px;
             border-bottom: 1px solid rgba(255, 204, 79, 0.15);
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-color: rgba(186, 159, 89, 0.8);
         }
 
         .bio-text {
-            font-size: 0.9375rem;
+            font-size: 0.98rem;
             color: var(--gold-muted);
             line-height: 1.65;
             margin-bottom: 8px;
@@ -166,7 +168,7 @@
         }
 
         .bullet-list li {
-            font-size: 0.9375rem;
+            font-size: 0.98rem;
             color: var(--gold-muted);
             line-height: 1.65;
             padding-left: 20px;
@@ -183,7 +185,7 @@
         }
 
         .sub-heading {
-            font-size: 0.9375rem;
+            font-size: 0.98rem;
             font-weight: 600;
             color: var(--white);
             margin-top: 12px;
@@ -191,7 +193,7 @@
         }
 
         .plain-text {
-            font-size: 0.9375rem;
+            font-size: 0.98rem;
             color: var(--gold-muted);
             line-height: 1.65;
             margin-bottom: 4px;
@@ -202,27 +204,27 @@
             background: #141414;
             border: 1px solid rgba(255, 204, 79, 0.28);
             border-radius: 18px;
-            padding: 22px 20px 28px;
+            padding: 22px 20px;
             margin-bottom: 14px;
-            margin-top: 20px;
         }
 
         .contact-heading {
             font-size: 1.05rem;
             font-weight: 700;
             color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
             margin-bottom: 18px;
             padding-bottom: 8px;
             border-bottom: 1px solid rgba(255, 204, 79, 0.15);
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-color: rgba(186, 159, 89, 0.8);
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 14px;
-            font-size: 0.9375rem;
+            font-size: 0.98rem;
         }
 
         .contact-label {
@@ -379,8 +381,8 @@
 
         <!-- Save Contact Button -->
         <div class="save-contact-section fade-in">
-            <a href="vcard.vcf" download="BryanLee.vcf" class="save-contact-btn" id="saveContactBtn">
-                Save Contact
+            <a href="vcard.vcf" download="BryanLee.vcf" class="btn-save" id="saveContactBtn">
+                SAVE CONTACT
             </a>
         </div>
 
