@@ -18,11 +18,13 @@
         :root {
             --bg-dark: #181611;
             --bg-darker: #100E0A;
+            --card: #141414;
             --gold: #FFCC4F;
-            --gold-muted: #EFCD72;
-            --gold-text: rgba(255, 234, 204, 0.49);
+            --gold-muted: #ba9f59;
+            --text-soft: #f5f3ee;
             --white: #FBFAF9;
             --white-muted: rgba(251, 250, 249, 0.85);
+            --border: rgba(240, 205, 114, 0.28);
         }
 
         html {
@@ -31,9 +33,9 @@
 
         body {
             font-family: 'Inter', 'Arial', sans-serif;
-            font-size: 16px;
+            font-size: 15px;
             background-color: var(--bg-dark);
-            color: var(--gold-muted);
+            color: var(--text-soft);
             line-height: 1.65;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -46,13 +48,28 @@
             background-color: var(--bg-dark);
             position: relative;
             overflow: hidden;
-            padding: 0 18px 48px;
+            padding: 28px 18px 48px;
+        }
+
+        .panel,
+        .hero-panel,
+        .content-section,
+        .contact-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 22px 20px;
+            margin-bottom: 14px;
+        }
+
+        .hero-panel {
+            padding: 28px 20px 22px;
         }
 
         /* Logo Section */
         .logo-section {
             text-align: center;
-            padding: 40px 20px 20px;
+            padding: 0 0 16px;
         }
 
         .logo-section img {
@@ -65,7 +82,7 @@
         /* Name & Title Section */
         .name-section {
             text-align: center;
-            padding: 20px 30px 10px;
+            padding: 0 0 16px;
         }
 
         .name {
@@ -103,7 +120,7 @@
 
         /* Save Contact Button */
         .save-contact-section {
-            padding: 0 12px 18px;
+            padding: 0;
         }
 
         .btn-save {
@@ -136,29 +153,26 @@
         }
 
         /* Content Sections */
-        .content-section {
-            background: #141414;
-            border: 1px solid rgba(255, 204, 79, 0.28);
-            border-radius: 18px;
-            padding: 22px 20px;
-            margin-bottom: 14px;
-        }
-
-        .section-heading {
-            font-size: 1.05rem;
+        .section-heading,
+        .contact-heading {
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--gold);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             padding-bottom: 8px;
             border-bottom: 1px solid rgba(255, 204, 79, 0.15);
             text-decoration: underline;
             text-underline-offset: 6px;
-            text-decoration-color: rgba(186, 159, 89, 0.8);
+            text-decoration-color: var(--gold-muted);
+        }
+
+        .contact-heading {
+            margin-bottom: 18px;
         }
 
         .bio-text {
-            font-size: 0.98rem;
-            color: var(--gold-muted);
+            font-size: 1rem;
+            color: var(--text-soft);
             line-height: 1.65;
             margin-bottom: 8px;
             text-align: justify;
@@ -170,8 +184,8 @@
         }
 
         .bullet-list li {
-            font-size: 0.98rem;
-            color: var(--gold-muted);
+            font-size: 1rem;
+            color: var(--text-soft);
             line-height: 1.65;
             padding-left: 20px;
             position: relative;
@@ -187,7 +201,7 @@
         }
 
         .sub-heading {
-            font-size: 0.98rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--white);
             margin-top: 12px;
@@ -195,38 +209,17 @@
         }
 
         .plain-text {
-            font-size: 0.98rem;
-            color: var(--gold-muted);
+            font-size: 1rem;
+            color: var(--text-soft);
             line-height: 1.65;
             margin-bottom: 4px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: #141414;
-            border: 1px solid rgba(255, 204, 79, 0.28);
-            border-radius: 18px;
-            padding: 22px 20px;
-            margin-bottom: 14px;
-        }
-
-        .contact-heading {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 18px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 204, 79, 0.15);
-            text-decoration: underline;
-            text-underline-offset: 6px;
-            text-decoration-color: rgba(186, 159, 89, 0.8);
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 14px;
-            font-size: 0.98rem;
+            font-size: 1rem;
         }
 
         .contact-label {
@@ -305,35 +298,19 @@
         @media (max-width: 480px) {
             .card-container {
                 max-width: 100%;
+                padding: 20px 12px 48px;
             }
 
             .logo-section img {
                 width: 65%;
             }
 
-            .name-section,
-            .content-section,
-            .save-contact-section {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .contact-section {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
             .contact-label {
                 min-width: 75px;
-                font-size: 0.82rem;
-            }
-
-            .contact-value {
-                font-size: 0.82rem;
             }
 
             .action-btn {
-                font-size: 0.78rem;
+                font-size: 0.85rem;
                 padding: 8px 14px;
             }
         }
@@ -368,13 +345,14 @@
 </head>
 <body>
     <div class="card-container">
+        <div class="hero-panel fade-in">
         <!-- Logo / Emblem -->
-        <div class="logo-section fade-in">
+        <div class="logo-section">
             <img src="assets/logo.png" alt="CAF Capital Logo" />
         </div>
 
         <!-- Name & Title -->
-        <div class="name-section fade-in">
+        <div class="name-section">
             <h1 class="name">Bryan Lee</h1>
             <p class="title">Board Member | FDI &bull; Sovereign Advisory</p>
             <p class="subtitle">&bull; Cross-Border Capital Structuring</p>
@@ -382,10 +360,11 @@
         </div>
 
         <!-- Save Contact Button -->
-        <div class="save-contact-section fade-in">
+        <div class="save-contact-section">
             <a href="vcard.vcf" download="BryanLee.vcf" class="btn-save" id="saveContactBtn">
                 SAVE CONTACT
             </a>
+        </div>
         </div>
 
         <!-- PROFILE Section -->
